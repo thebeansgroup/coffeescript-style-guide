@@ -137,7 +137,7 @@ Avoid extraneous whitespace in the following situations:
 
 Additional recommendations:
 
-- Always surround these binary operators with a **single space** on either side
+- Surround these binary operators with a **single space** on either side
 
     - assignment: `=`
 
@@ -152,7 +152,7 @@ Additional recommendations:
     - comparisons: `==`, `<`, `>`, `<=`, `>=`, `unless`, etc.
     - arithmetic operators: `+`, `-`, `*`, `/`, etc.
 
- -  In assignments or definitions whitespace can be used to make the code more clear and readable:
+-  An exception to the rule above can be made if additional whitespace can be used to make the code more clear and readable:
 
         ```coffeescript
         a: 1
