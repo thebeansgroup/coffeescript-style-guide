@@ -154,15 +154,15 @@ Additional recommendations:
 
 -  An exception to the rule above can be made if additional whitespace can be used to make the code more clear and readable:
 
-        ```coffeescript
-        a: 1
-        apple:
-          them: "apples"
+    ```coffeescript
+    a: 1
+    apple:
+      them: "apples"
 
-        x   = 1
-        yy  = 2
-        zzz = 3
-        ```
+    x   = 1
+    yy  = 2
+    zzz = 3
+    ```
 
 <a name="comments"/>
 ## Comments
