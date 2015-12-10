@@ -152,18 +152,16 @@ Additional recommendations:
     - comparisons: `==`, `<`, `>`, `<=`, `>=`, `unless`, etc.
     - arithmetic operators: `+`, `-`, `*`, `/`, etc.
 
-    - _(Do not use more than one space around these operators)_
+ -  In assignments or definitions whitespace can be used to make the code more clear and readable:
 
         ```coffeescript
-           # Yes
-           x = 1
-           y = 1
-           fooBar = 3
+        a: 1
+        apple:
+          them: "apples"
 
-           # No
-           x      = 1
-           y      = 1
-           fooBar = 3
+        x   = 1
+        yy  = 2
+        zzz = 3
         ```
 
 <a name="comments"/>
