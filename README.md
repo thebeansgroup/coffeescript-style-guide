@@ -40,7 +40,6 @@ The details in this guide have been very heavily inspired by several existing st
     * [Looping and Comprehensions](#looping_and_comprehensions)
     * [Extending Native Objects](#extending_native_objects)
     * [Exceptions](#exceptions)
-    * [Annotations](#annotations)
     * [Miscellaneous](#miscellaneous)
 
 <a name="code_layout"/>
@@ -138,7 +137,7 @@ Avoid extraneous whitespace in the following situations:
 
 Additional recommendations:
 
-- Always surround these binary operators with a **single space** on either side
+- Surround these binary operators with a **single space** on either side
 
     - assignment: `=`
 
@@ -153,19 +152,17 @@ Additional recommendations:
     - comparisons: `==`, `<`, `>`, `<=`, `>=`, `unless`, etc.
     - arithmetic operators: `+`, `-`, `*`, `/`, etc.
 
-    - _(Do not use more than one space around these operators)_
+-  An exception to the rule above can be made if additional whitespace can be used to make the code more clear and readable:
 
-        ```coffeescript
-           # Yes
-           x = 1
-           y = 1
-           fooBar = 3
+    ```coffeescript
+    a: 1
+    apple:
+      them: "apples"
 
-           # No
-           x      = 1
-           y      = 1
-           fooBar = 3
-        ```
+    x   = 1
+    yy  = 2
+    zzz = 3
+    ```
 
 <a name="comments"/>
 ## Comments
@@ -398,39 +395,6 @@ For example, do not modify `Array.prototype` to introduce `Array#forEach`.
 ## Exceptions
 
 Do not suppress exceptions.
-
-<a name="annotations"/>
-## Annotations
-
-Use annotations when necessary to describe a specific action that must be taken against the indicated block of code.
-
-Write the annotation on the line immediately above the code that the annotation is describing.
-
-The annotation keyword should be followed by a colon and a space, and a descriptive note.
-
-```coffeescript
-  # FIXME: The client's current state should *not* affect payload processing.
-  resetClientState()
-  processPayload()
-```
-
-If multiple lines are required by the description, indent subsequent lines with two spaces:
-
-```coffeescript
-  # TODO: Ensure that the value returned by this call falls within a certain
-  #   range, or throw an exception.
-  analyze()
-```
-
-Annotation types:
-
-- `TODO`: describe missing functionality that should be added at a later date
-- `FIXME`: describe broken code that must be fixed
-- `OPTIMIZE`: describe code that is inefficient and may become a bottleneck
-- `HACK`: describe the use of a questionable (or ingenious) coding practice
-- `REVIEW`: describe code that should be reviewed to confirm implementation
-
-If a custom annotation is required, the annotation should be documented in the project's README.
 
 <a name="miscellaneous"/>
 ## Miscellaneous
